@@ -1,0 +1,170 @@
+lxde-metapackages (11) unstable; urgency=medium
+
+  * Reposition Vcs-* to the Debian Salsa.
+  * Bump Standards-Version to 4.5.1.
+  * Dropping customized compression options from debian/source/options file.
+  * Adding 'Rules-Requires-Root: no' header.
+  * Bump debhelper to version 12.
+  * Dropping leafpad as a dependency of lxde package (Closes: #916042).
+  * Recommending gnome-colors and numlockx (Related: #923796).
+  * Adding parcellite and copyq as alternatives for clipit (Closes: #960111).
+  * Switching from pk-update-icon to package-update-indicator (Closes: #966529).
+  * Replacing default recommendation on wicd with connman-gtk (Closes: #928692).
+
+ -- Andriy Grytsenko <andrej@rep.kiev.ua>  Mon, 22 Feb 2021 22:33:03 +0200
+
+lxde-metapackages (10) unstable; urgency=medium
+
+  * Replacing recommendation for gksu with policykit-1 (use pkexec instead)
+    (Closes: #885550).
+  * Replacing http with https in debian/copyright file.
+  * Adding mousepad as an alternative to leafpad dependency (Closes: #864164).
+  * Lowercasing the short descriptions of packages (Closes: #873529).
+  * Bump debhelper compat version to 10.
+  * Bump Standards-Version to 4.1.4.
+
+ -- Andriy Grytsenko <andrej@rep.kiev.ua>  Sun, 15 Apr 2018 22:58:33 +0300
+
+lxde-metapackages (9) unstable; urgency=medium
+
+  * Replacing deprecated iceweasel with firefox-esr in Recommends.
+  * Removing override_dh_builddeb target from debian/rules, it fails on 32-bit
+    archs.
+  * Adding firefox as an alternative to firefox-esr (Closes: #848159). Ubuntu
+    does not have package firefox-esr.
+
+ -- Andriy Grytsenko <andrej@rep.kiev.ua>  Wed, 14 Dec 2016 21:56:15 +0200
+
+lxde-metapackages (8) unstable; urgency=medium
+
+  * Replacing gone gnome-mplayer with smplayer | vlc | mplayer-gui.
+  * Removing desktop-file-utils from lxde-core Depends, those utils aren't used
+    in any way by this package.
+  * Adding lxde-session into Depends for lxde-core (Closes: #843341).
+  * Removing lxde-common | x-session-manager from Recommends.
+  * Updating description for lxde-core package.
+  * Adding gnome-calculator as an advanced alternative to galculator.
+  * Removing openbox from Recommends for lxde.
+  * Adding lxhotkey-gtk to Depends for lxde.
+  * Removing alsamixergui from Recommends for lxde.
+  * Replacing obsolete recommendation evince-gtk with evince.
+  * Replacing obsolete suggestion update-notifier with pk-update-icon.
+  * Bump Standards-Version to 3.9.8.
+  * Using https for VCS fields in debian/control file.
+
+ -- Andriy Grytsenko <andrej@rep.kiev.ua>  Sat, 26 Nov 2016 00:45:17 +0200
+
+lxde-metapackages (7) unstable; urgency=medium
+
+  * Changing Maintainer e-mail to Alioth based one.
+  * Moving lxde-common to Recommends and adding x-session-manager as
+    alternative.
+  * Adding lxde-common | x-session-manager as dependency for lxde.
+  * Moving openbox from Depends for lxde-core to Recommends for lxde and
+    adding alternative x-window-manager (Closes: #809328).
+  * Removing lxsession from Recommends for lxde-core.
+  * Adding notification-daemon as recommended by lxde-core.
+  * Bump Standards-Version to 3.9.7.
+
+ -- Andriy Grytsenko <andrej@rep.kiev.ua>  Sun, 21 Feb 2016 15:12:24 +0200
+
+lxde-metapackages (6) unstable; urgency=low
+
+  * Adding pdf-viewer alternative to evince-gtk (Closes: #769175).
+  * Adding network-manager-gnome alternative to wicd (Closes: #768390).
+
+ -- Andriy Grytsenko <andrej@rep.kiev.ua>  Wed, 12 Nov 2014 22:45:06 +0200
+
+lxde-metapackages (5) unstable; urgency=low
+
+  [ Jackson Doak ]
+  * Fill in the "upstream" fields in debian/copyright
+  * Update descriptions to debian standards
+  * Fix a typo in the changelog
+  * Bump standards-version to 3.9.5
+  * Remove Daniel Baumann from the Uploaders field. (Closes: #704339)
+
+  [ Andriy Grytsenko ]
+  * Removing versioning (>= 0.9.8) from pcmanfm, it is very much obsolete.
+  * Adding lxsession to Recommends for lxde-core, it is already mentioned in
+    description but missing.
+  * Replacing obconf with lxappearance-obconf, it is more appropriate for LXDE.
+  * Removing lxshortcut from lxde dependencies, it deprecated (Closes: #762052).
+  * Adding lxde to suggested by lxde-core.
+  * Adding alsamixergui as recommended by lxde: users often need an audio mixer
+    application.
+  * Adding clipit as recommended by lxde: most of users find it very handy.
+  * Adding deluge | transmission-gtk as recommended by lxde: too many users use
+    bittorent.
+  * Adding evince-gtk (PDF reader) as recommended by lxde (Closes: #685241).
+  * Adding gnome-disk-utility as recommended by lxde.
+  * Adding gnome-mplayer as recommended by lxde: almost every user needs a video
+    player.
+  * Adding gnome-system-tools as recommended by lxde: users on non-single-user
+    machine require it.
+  * Adding gucharmap as recommended by lxde: it is widely used application.
+  * Adding audacious as alternative to lxmusic (Closes: #681500).
+  * Adding usermode as recommended by lxde: it contains currently missing simple
+    applications to change user password or name.
+  * Adding gimp as suggested by lxde: many users want image editor installed.
+  * Adding libreofice as suggested by lxde: most of users need office suite.
+  * Adding pidgin as suggested by lxde: many users want IM application for ICQ
+    or Jabber.
+  * Adding xfce4-power-manager as suggested by lxde: most of laptop users use
+    it.
+  * Adding update-notifier as suggested by lxde (Closes: #708622).
+  * Bump Standards-Version to 3.9.6.
+  * Adding myself to Uploaders.
+  * Correcting description of lxde: remove deprecated and add included
+    dependencies.
+  * Replacing network-manager-gnome with wicd since it isn't available
+    everywhere.
+
+ -- Andriy Grytsenko <andrej@rep.kiev.ua>  Wed, 22 Oct 2014 02:01:00 +0300
+
+lxde-metapackages (4+nmu1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * guarantee proper migration from old environment to wheezy
+    Thanks to Andreas Beckmann <debian@abeckmann.de> for pointing this
+    out and patch (Closes: #694061)
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 24 Nov 2012 14:11:20 +0900
+
+lxde-metapackages (4) unstable; urgency=low
+
+  * Switching from gdm3 to lightdm.
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 10 Aug 2012 22:40:30 +0200
+
+lxde-metapackages (3) unstable; urgency=low
+
+  * Adding galculator to lxde depends (Closes: #659577).
+  * Readding back network-manager-gnome which apparently got lost at
+    some point.
+  * Updating GPL blurb in copyright file.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 07 Jul 2012 19:23:15 +0200
+
+lxde-metapackages (2) unstable; urgency=low
+
+  [ Andrew Lee (李健秋) ]
+  * Recommends on gdm3.
+  * Adjusting Recommends for lxde meta package (policykit-1-gnome |
+    lxpolkit, network-manager-gnome | connman).
+
+  [ Sergey Slipchenko ]
+  * Recommend lxpolkit instead of policykit-1-gnome.
+
+  [ Daniel Baumann ]
+  * Removing superflous alternative browser in recommends.
+  * Restoring original recommends on iceweasel, now that it has improved
+    a lot.
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 18 May 2012 10:08:16 +0200
+
+lxde-metapackages (1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 20 Apr 2012 10:30:37 +0200

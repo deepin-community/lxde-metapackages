@@ -1,0 +1,66 @@
+Source: lxde-metapackages
+Section: metapackages
+Priority: optional
+Maintainer: Debian LXDE Maintainers <pkg-lxde-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Andrew Lee (李健秋) <ajqlee@debian.org>,
+ Andriy Grytsenko <andrej@rep.kiev.ua>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: http://www.lxde.org/
+Vcs-Browser: https://salsa.debian.org/lxde-team/lxde-metapackages
+Vcs-Git: https://salsa.debian.org/lxde-team/lxde-metapackages.git
+
+Package: lxde-core
+Architecture: all
+Depends:
+ ${misc:Depends}, lxpanel, pcmanfm, lxde-session
+Recommends:
+ policykit-1, lxterminal | x-terminal-emulator,
+ notification-daemon, xscreensaver
+Suggests: firefox-esr | firefox | www-browser, lxde, lxlauncher
+Description: metapackage for the LXDE core
+ The Lightweight X11 Desktop Environment (LXDE) is a project aimed
+ to provide a desktop environment which is lightweight and fast.
+ .
+ This package is a metapackage which depends on minimal LXDE components set
+ required to get a working desktop - pcmanfm, lxpanel, and lxde-session.
+ This package also recommends few the most useful applications such as
+ terminal emulator, notification-daemon, and xscreensaver.
+ .
+ If you just want to pick and choose the core components then feel free
+ to remove this package.
+
+Package: lxde
+Architecture: all
+Depends:
+ ${misc:Depends},
+ galculator | gnome-calculator, gpicview, mousepad | leafpad,
+ lxappearance, lxappearance-obconf, lxde-core,
+ lxde-icon-theme, lxhotkey-gtk, lxinput, lxrandr,
+ lxsession-edit, lxterminal, xarchiver
+Recommends:
+ connman-gtk | network-manager-gnome | wicd, deluge | transmission-gtk,
+ evince | pdf-viewer, gnome-disk-utility,
+ smplayer | vlc | mplayer-gui, gnome-colors,
+ gnome-system-tools, gucharmap, firefox-esr | firefox | www-browser,
+ lightdm | x-display-manager,
+ lxmusic | audacious, lxpolkit, menu-xdg,
+ parcellite | clipit | copyq, numlockx, usermode,
+ xserver-xorg
+Suggests:
+ gimp, libreoffice, lxlauncher,
+ lxtask, package-update-indicator, pidgin,
+ xfce4-power-manager
+Description: metapackage for LXDE
+ The Lightweight X11 Desktop Environment (LXDE) is a project aimed
+ to provide a desktop environment which is lightweight and fast.
+ .
+ This package is a metapackage depends on the core components and
+ recommended components of the LXDE. It includes lxde-core, lxappearance,
+ lxinput, lxsession-edit, gpicview, lxterminal, lxrandr, galculator,
+ mousepad and xarchiver.
+ .
+ If you just want to pick and choose the LXDE components then feel free
+ to remove this package.
